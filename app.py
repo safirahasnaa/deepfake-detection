@@ -6,7 +6,7 @@ from PIL import Image
 import os
 import cv2
 import matplotlib.pyplot as plt
-from cv2 import CascadeClassifier
+from mtcnn import MTCNN
 
 # SETUP PATH & LOAD MODEL
 # pakai path lokal
