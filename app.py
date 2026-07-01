@@ -39,7 +39,7 @@ def process_and_crop_face(image, detector):
     
     # konversi rgba ke rgb
     if img_array.shape[-1] == 4:
-        img_array = cv2.cvtColor(img_array, cv2.COLOR_RGBA2RGB)
+        img_array = cv.cvtColor(img_array, cv2.COLOR_RGBA2RGB)
         
     results = detector.detect_faces(img_array)
     
@@ -67,7 +67,7 @@ def process_and_crop_face(image, detector):
         return None
         
     # resize ke ukuran input xception (128x128)
-    face_resized = cv2.resize(face_crop, (IMG_SIZE, IMG_SIZE))
+    face_resized = cv.resize(face_crop, (IMG_SIZE, IMG_SIZE))
     return face_resized
 
 
