@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import os
-import cv2
+import cv2 as cv
 import matplotlib.pyplot as plt
-from cv2 import CascadeClassifier
+
 
 # SETUP PATH & LOAD MODEL
 # pakai path lokal
