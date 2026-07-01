@@ -17,9 +17,17 @@ IMG_SIZE = 128
 @st.cache_resource
 def load_deeplearning_model():
     """Fungsi untuk load model sekali saja (cached)"""
+
+    print("MODEL PATH   :", MODEL_PATH)
+    print("FILE ADA     :", os.path.exists(MODEL_PATH))
+
     if os.path.exists(MODEL_PATH):
-        return tf.keras.models.load_model(MODEL_PATH)
+        print("UKURAN FILE  :", os.path.getsize(MODEL_PATH), "bytes")
+
+        return tf.keras.models.load_model(MODEL_PATH, compile=False)
+
     else:
+        print("MODEL TIDAK DITEMUKAN!")
         return None
 
 @st.cache_resource
